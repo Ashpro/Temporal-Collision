@@ -1,0 +1,16 @@
+This is Temporal Collision. I envisioned this game as similar to a first person shooter, but not just shooting. I'm thinking 5 units, in a forest setting, which they are able to slightly alter. Moderatly good 3D graphics, probably using jPCT or lwjgl.
+
+Hammer:
+The "Heavy Weaponry" Unit. This unit carries a large hammer, and correspondingly has a slow attack, but is quite powerful. It can easily kill most of the units, provided they don't dodge. It doesn't have much shields, as the heavy hammer means it can't hold much more. Extremely good against the mage. Weak against the swordsman.
+
+Mage:
+The "Magic" Unit, of course. This unit doesn't have that good of an attack, but makes up for it with it's powerful defense. It can create many types of shields, ranging from a low power moveable shield to a heavy shield that stuns the Mage when broken. The heavy shield can take even a few hits from a Hammer. Strong against the Gunman. Weak against the Hammer.
+
+Swordsman:
+The "Melee" Unit. This unit is very fast, with moderate armor. It's sword can cut through many materials as if it was paper. Its able to powerfully deal blows to the Hammer, and run away before getting pummeled. It's strong against the Hammer, but weak against an Archer, who is able to pierce that armor easily.
+
+Archer:
+The "Ranged" Unit. This unit has a slower rate of fire than the gunman, but makes up for it in speed and range. Given the clearance, it can shoot half way across the map without losing too much power. It has not much armor, but doesn't need it. Strong against the Swordsman, weak against the gunman.
+
+Gunman:
+The other "Ranged" Unit. This unit carries a powerful G36 assault rifle, which has an attached scope and little spread. Usually. Unfortunately, the rifts that brought the units together damaged the weapon, making it have more spread and weaker bullets. Still enough to take out it's ancestor, the Archer. Still, those pesky and impossible magic wielders are able to wipe this unit out.
