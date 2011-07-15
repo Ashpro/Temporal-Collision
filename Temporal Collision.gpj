@@ -1,5 +1,5 @@
-!704;s
-A
+!920;s
+J
 SAU0PATH+=%<JGRASP_PATHS>%;
 SCU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
 S+U0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
@@ -7,11 +7,21 @@ SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\01
 SOU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
 SPU0
 s#i0
-s#k0
-s#j0
+s#k0C:\\Users\\Ashwin\\Temporal-Collision\\jpct.jar\000C:\\Users\\Ashwin\\Temporal-Collision\\doc\\jpct\\doc\\javadoc\012C:\\Users\\Ashwin\\Temporal-Collision\\TexturePack.jar\000
+s#j0C:\\Users\\Ashwin\\Temporal-Collision\\jpct.jar
 s#l0
 s#m0src
-s#n0classes
 s#p0doc
-s#q0test
+s#s0src\\resrc
 s#r0builds
+!35;a
+a%\011doc%stemporal-collison%s	b	c1!211;g
+%\011src%sorg%sashpro%stemporal%sunits%sUnit.java
+%\011src%sorg%sashpro%stemporal%sAbstractEntity.java
+%\011src%sorg%sashpro%stemporal%sTemporalCollision.java
+%\011src%sorg%sashpro%stemporal%sunits%sEntity.java
+!199;f
+%	src%sorg%sashpro%stemporal%sunits%sUnit.java
+%	src%sorg%sashpro%stemporal%sAbstractEntity.java
+%	src%sorg%sashpro%stemporal%sTemporalCollision.java
+%	src%sorg%sashpro%stemporal%sunits%sEntity.java
