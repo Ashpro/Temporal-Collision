@@ -8,23 +8,39 @@
       private float yRot=0;
       private static char c = File.separatorChar;
       private Object3D leg1 = null, leg2 = null;
+      private boolean shieldOn = false;
       static
       {
-         Texture spot=new Texture("resrc"+c+"textures"+c+"skin.jpg");
-         TextureManager.getInstance().addTexture("magician", spot);
+         Texture body=new Texture("resrc"+c+"textures"+c+"skin.jpg");
+         Texture shield=new Texture("resrc"+c+"textures"+c+"shield.jpg");
+         WaterTextureEffect wte = new WaterTextureEffect(20);
+         shield.setEffect(wte);
+         TextureManager.getInstance().addTexture("magician", body);
+         TextureManager.getInstance().addTexture("shield", shield);
       }
       public Unit(){
-         super(Primitives.getBox(3, 1.25f));
-         leg1 = Primitives.getSphere(5, 4);
-         leg2 = Primitives.getSphere(5, 4);
+         super(Primitives.getBox(5, 5f));
+         leg1 = Primitives.getSphere(20, 4);
+         leg2 = Primitives.getSphere(20, 4);
          addChild(leg1);
          addChild(leg2);
          setTexture("magician");
-         leg1.setTexture("magician");
-         leg2.setTexture("magician");
+         leg1.setTexture("shield");
+         leg2.setTexture("shield");
+         leg1.setCollisionMode(Object3D.COLLISION_CHECK_NONE);
+         leg2.setCollisionMode(Object3D.COLLISION_CHECK_NONE);
          setEnvmapped(Object3D.ENVMAP_ENABLED);
          leg1.setEnvmapped(Object3D.ENVMAP_ENABLED);
          leg2.setEnvmapped(Object3D.ENVMAP_ENABLED);
+         translate(new SimpleVector(0,4,0));
+         leg1.translate(new SimpleVector(-1, 4, 0));
+         leg2.translate(new SimpleVector(1, 4, 0));
+         translateMesh();
+         leg1.translateMesh();
+         leg2.translateMesh();
+         setTranslationMatrix(new Matrix());
+         leg1.setTranslationMatrix(new Matrix());
+         leg2.setTranslationMatrix(new Matrix());
          build();
          leg1.build();
          leg2.build();
@@ -88,5 +104,21 @@
       public float getDirection() {
          return yRot;
       }
-   
+      public boolean toggleShield() {
+         if(shieldOn)
+         {
+            shieldOn = false;
+            leg1.scale(1/14.0F);
+            return false;
+         }
+         else
+         {
+            shieldOn = true;
+            leg1.scale(14.0F);
+            return true;
+         }
+      }
+      public boolean isShieldOn() {
+         return shieldOn;
+      }
    }

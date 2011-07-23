@@ -6,7 +6,7 @@
    
       void addToWorld(World world);
    
-      void moveForward();
+      SimpleVector moveForward();
    
       void moveBackward();
    

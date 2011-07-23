@@ -118,7 +118,7 @@
          Texture rocks=new Texture("resrc"+c+"textures"+c+"rocks.png");
          texMan.addTexture("rocks", rocks);
       
-         Object3D[] objs=Loader.load3DS("resrc"+c+"models"+c+"terascene.3ds", 400);
+         Object3D[] objs=Loader.load3DS("resrc"+c+"models"+c+"test.3ds", 400);
          if (objs.length>0) {
             terrain=objs[0];
             terrain.setTexture("rocks");
@@ -149,7 +149,9 @@
          Config.collideOffset=250;
       
          terrain.setCollisionMode(Object3D.COLLISION_CHECK_OTHERS);
+         user.setCollisionMode(Object3D.COLLISION_CHECK_SELF);
          terrain.setCollisionOptimization(Object3D.COLLISION_DETECTION_OPTIMIZED);
+         user.setCollisionOptimization(Object3D.COLLISION_DETECTION_OPTIMIZED);
          
          camera=theWorld.getCamera();
          camera.setPosition(0,-500,0);
@@ -199,7 +201,8 @@
    
       private void display() {
          glFont.blitString(buffer, "FPS: " + totalFps, 5, 12, 0, Color.WHITE);
-         glFont.blitString(buffer, "PPS: " + lastPps, 5, 22, 0, Color.WHITE);  
+         glFont.blitString(buffer, "PPS: " + lastPps, 5, 22, 0, Color.WHITE);
+         glFont.blitString(buffer, "Health: " + user.getHealth(), 5, 72, 0, Color.WHITE);
       
          if (!fullscreen) {
             buffer.display(gFrame, leftBorderWidth, titleBarHeight);
@@ -220,6 +223,8 @@
          if (right) {
             user.turnRight();
          }
+         // if(user.isShieldOn())
+            // return;
          Matrix backUpTrans=user.getTranslationMatrix().cloneMatrix();
       
          if (forward) {
@@ -385,6 +390,7 @@
             case (KeyEvent.VK_SPACE) :
                {
                   if(event) {
+                     user.toggleShield();
                   }
                   break;
                }
