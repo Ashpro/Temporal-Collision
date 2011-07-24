@@ -32,9 +32,9 @@
          setEnvmapped(Object3D.ENVMAP_ENABLED);
          leg1.setEnvmapped(Object3D.ENVMAP_ENABLED);
          leg2.setEnvmapped(Object3D.ENVMAP_ENABLED);
-         translate(new SimpleVector(0,4,0));
-         leg1.translate(new SimpleVector(-1, 4, 0));
-         leg2.translate(new SimpleVector(1, 4, 0));
+         translate(new SimpleVector(0,14,0));
+         leg1.translate(new SimpleVector(-1, 14, 0));
+         leg2.translate(new SimpleVector(1, 14, 0));
          translateMesh();
          leg1.translateMesh();
          leg2.translateMesh();

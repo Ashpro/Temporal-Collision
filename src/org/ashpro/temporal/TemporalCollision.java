@@ -118,7 +118,7 @@
          Texture rocks=new Texture("resrc"+c+"textures"+c+"rocks.png");
          texMan.addTexture("rocks", rocks);
       
-         Object3D[] objs=Loader.load3DS("resrc"+c+"models"+c+"test.3ds", 400);
+         Object3D[] objs=Loader.load3DS("resrc"+c+"models"+c+"terascene.3ds", 400);
          if (objs.length>0) {
             terrain=objs[0];
             terrain.setTexture("rocks");
@@ -140,7 +140,7 @@
          terrain.setTranslationMatrix(new Matrix()); 
          terrain.setRotationMatrix(new Matrix());
       
-         terrain.createTriangleStrips(2);
+         terrain.createTriangleStrips(0);
       
          OcTree oc=new OcTree(terrain,50,OcTree.MODE_OPTIMIZED);
          terrain.setOcTree(oc);
@@ -202,7 +202,7 @@
       private void display() {
          glFont.blitString(buffer, "FPS: " + totalFps, 5, 12, 0, Color.WHITE);
          glFont.blitString(buffer, "PPS: " + lastPps, 5, 22, 0, Color.WHITE);
-         glFont.blitString(buffer, "Health: " + user.getHealth(), 5, 72, 0, Color.WHITE);
+         //glFont.blitString(buffer, "Health: " + user.getHealth(), 5, 72, 0, Color.WHITE);
       
          if (!fullscreen) {
             buffer.display(gFrame, leftBorderWidth, titleBarHeight);
